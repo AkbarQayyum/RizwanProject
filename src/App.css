@@ -1,0 +1,41 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif !important;
+}
+body{
+    font-family: 'Montserrat', sans-serif !important;
+}
+.hoverstyle:hover{
+    background-color: #061470 !important;
+    transition: 0.3s;
+}
+.whatsbtn:hover{
+    background-color: transparent !important;
+    transition: 0.3s;
+}
+.footerlink{
+    text-decoration: none;
+    color: #FFFFFF;
+    font-size: 14px;
+    margin: 0 25px 10px 0;
+}
+.footersociallinks{
+    box-shadow: 0 0 30px 3px rgb(231, 19, 34);
+    /* border-radius: 50%; */
+    color: #FFFFFF;
+    background-color: none;
+}
+.laserbookspan{
+    color: #0a2aff;
+}
+.cardimg{
+    position: absolute;
+    right: -235px;
+	bottom: -145%;
+	/* max-width: 550px; */
+    transform:  translate(-10px,10px) !important;
+    overflow-clip-margin: content-box;
+    overflow: hidden !important;
+}

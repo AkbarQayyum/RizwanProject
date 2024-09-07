@@ -1,0 +1,31 @@
+.navbar {
+  background-color: transparent;
+}
+
+.navbar-fixed {
+  /* backdrop-filter: blur(15px); */
+  animation: headerSlideDown 0.5s ease forwards;
+  background-color: #061470;
+  box-shadow: 0 10px 15px rgba(25, 25, 25, 0.1);
+}
+
+.onScrollColor {
+  color: #FFFFFF;
+}
+.offScrollColor {
+  color: black;
+}
+@keyframes headerSlideDown {
+  0% {
+    margin-top: -100px;
+    opacity: 0;
+  }
+  30% {
+    margin-top: -60px;
+    opacity: 0;
+  }
+  100% {
+    margin-top: 0;
+    opacity: 1;
+  }
+}
