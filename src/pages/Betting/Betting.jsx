@@ -5,7 +5,7 @@ import BettingStyle from './BettingStyle'
 // import CARD from '../../assets/cardbig.png'
 const Betting = () => {
   return (
-    <>
+    <div id='aboutus'>
       <Box sx={{
         background: `url(${BG}) no-repeat center center`,
         backgroundSize: "cover",
@@ -46,7 +46,7 @@ const Betting = () => {
           </Grid2>
         </Container>
       </Box>
-    </>
+    </div>
   )
 }
 

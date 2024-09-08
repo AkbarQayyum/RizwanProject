@@ -1,3 +1,32 @@
-body{
+body {
     font-family: 'Montserrat', sans-serif !important;
+}
+
+@keyframes example {
+    0% {
+        bottom: 0;
+        right: -5%;
+    }
+
+    50% {
+        bottom: 5%;
+        right:-10%;
+    }
+
+    100% {
+        bottom: 0;
+        right: -5%;
+    }
+}
+.moveimage {
+    animation: infinite ease-in-out example 3s ;
+    
+}
+@media screen and (max-width:1000px) {
+    .moveimage{
+        display: none;
+    }
+}
+a{
+    cursor: pointer;
 }

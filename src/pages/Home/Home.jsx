@@ -1,38 +1,45 @@
 import { Box, Container, Grid2, Typography } from "@mui/material"
 import BG from "../../assets/bg.png";
-import SIDEIMG from '../../assets/sideImg.png'
+import SIDEIMG from '../../assets/cardbig.png'
 // import { makeStyles } from "@mui/styles";
 import HomeStyle from "./HomeStyle";
 import WhatsApp from "../What'sApp/WhatsApp";
+import { makeStyles } from "@mui/styles";
 
-// const useStyles = makeStyles(() => ({
-//   textone: {
-//     marginTop:"12rem",
-//     background:"#FFFFFF",
-//     width:"210px",
-//     textAlign:"center",
-//     color:"#061470",
-//     fontSize:"16px",
-//     fontWeight:700,
-//     lineHeight:"19.5px"
-//   },
-  
-// }));
+const useStyle = makeStyles(()=>{
+
+  return {
+    cardbgimage :{
+      width:'90%',
+      position:'absolute',
+      bottom:'0%',
+      right:'0px',
+    },
+    rightcornerimage:{
+      width:'200px',
+      position:'absolute',
+      bottom:'-50px',
+      left:'-5%',
+    }
+  }
+})
+
 
 const Home = () => {
-  // const classes = useStyles()
+  const {cardbgimage,rightcornerimage} = useStyle()
   return (
     <>
       <Box sx={{
         background: `url(${BG})`,
         backgroundRepeat: "no-repeat",
         backgroundSize: "cover",
-        backgroundPosition:"50%"
+        backgroundPosition:"50%",
+        position:'relative'
 
       }}>
         <Container>
           <Grid2 container>
-            <Grid2 size={{ xs: 12, md: 6 }}>
+            <Grid2 size={{ xs: 12, md: 6 }} sx={{zIndex:1}}>
               <Box sx={{marginTop:{md:"14rem", xs:"12rem"}}}>
               <span style={HomeStyle.textone}>
                 India’s #1 Exchange
@@ -53,13 +60,14 @@ const Home = () => {
               </Box>
 
             </Grid2>
-            <Grid2 size={{ xs: 12, md: 6 }}>
-              <Box sx={{marginTop:{md:"18rem", xs:"1rem"}}}>
-                <img src={SIDEIMG} style={{width:"100%"}} alt="" />
+            <Grid2 size={{ xs: 12, md: 6 }} sx={{position:'relative'}}>
+              <Box  >
+                <img src={SIDEIMG} className={`${cardbgimage} moveimage`}  alt="" />
               </Box>
             </Grid2>
           </Grid2>
         </Container>
+        <img src={SIDEIMG} className={`${rightcornerimage} moveimage`}  alt="" />
       </Box>
       <WhatsApp/>
     </>

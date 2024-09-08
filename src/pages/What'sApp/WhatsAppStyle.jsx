@@ -14,9 +14,7 @@ const WhatsAppStyle = {
         display:"flex",
         justifyContent:"space-evenly",
         gap:3,
-        flexDirection:{md:"row", xs:"column"},
         alignItems:"center",
-        marginTop:{md:"0px", xs:"1.5rem"}
     },
 }
 export default WhatsAppStyle

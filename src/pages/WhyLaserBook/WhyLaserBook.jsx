@@ -11,7 +11,7 @@ const WhyLaserBook = () => {
                 backgroundSize: "cover",
                 backgroundAttachment: "fixed",
                 padding: "3rem 15px"
-            }}>
+            }} id={'whysafari'}>
                 <Container>
                     <Typography component={'h2'} sx={WhyLaserBookStyle.mainheading}>
                         Why SAFARIBET365

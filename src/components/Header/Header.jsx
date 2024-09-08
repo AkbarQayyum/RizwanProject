@@ -5,6 +5,8 @@ import HeaderStyle from "./HeaderStyle";
 import MenuIcon from "@mui/icons-material/Menu";
 import { useEffect, useState } from "react";
 import ResponsiveDrawer from "./Drawer/ResponsiveDrawer";
+import { Link, Button, Element, Events, animateScroll as scroll, scrollSpy } from 'react-scroll';
+
 import "./Header.css";
 const Header = () => {
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -42,8 +44,13 @@ const Header = () => {
             <Hidden mdDown>
               <Box sx={HeaderStyle.HeaderItem}>
                 <Typography sx={{fontSize:"15px"}}>
-                  <NavLink
-                    to={"/about-us"}
+                  <Link
+                    activeClass="active" 
+                    to="aboutus" 
+                    spy={true} 
+                    smooth={true} 
+                    offset={-100} 
+                    duration={500} 
                     style={{
                       textDecoration: "none",
                       color: activeOffest ? "#FFF" : "#FFF",
@@ -52,11 +59,16 @@ const Header = () => {
                     }}
                   >
                     About Us
-                  </NavLink>
+                  </Link>
                 </Typography>
                 <Typography sx={{fontSize:"15px"}}>
-                  <NavLink
-                    to={"/OurPartners"}
+                  <Link
+                     activeClass="active" 
+                     to="partners" 
+                     spy={true} 
+                     smooth={true} 
+                     offset={-100} 
+                     duration={500} 
                     style={{
                       textDecoration: "none",
                       color: activeOffest ? "#FFF" : "#FFF",
@@ -64,11 +76,16 @@ const Header = () => {
                     }}
                   >
                     Our Partners
-                  </NavLink>
+                  </Link>
                 </Typography>
                 <Typography sx={{fontSize:"15px"}}>
-                  <NavLink
-                    to={"/HowItWorks"}
+                  <Link
+                     activeClass="active" 
+                     to="working" 
+                     spy={true} 
+                     smooth={true} 
+                     offset={-100} 
+                     duration={500} 
                     style={{
                       textDecoration: "none",
                       color: activeOffest ? "#FFF" : "#FFF",
@@ -76,11 +93,16 @@ const Header = () => {
                     }}
                   >
                     How It Works
-                  </NavLink>
+                  </Link>
                 </Typography>
                 <Typography sx={{fontSize:"15px"}}>
-                  <NavLink
-                    to={"/CelebsLoveUs"}
+                  <Link
+                     activeClass="active" 
+                     to="celebs" 
+                     spy={true} 
+                     smooth={true} 
+                     offset={-100} 
+                     duration={500} 
                     style={{
                       textDecoration: "none",
                       color: activeOffest ? "#FFF" : "#FFF",
@@ -88,11 +110,16 @@ const Header = () => {
                     }}
                   >
                     Celebs Love Us
-                  </NavLink>
+                  </Link>
                 </Typography>
                 <Typography sx={{fontSize:"15px"}}>
-                  <NavLink
-                    to={"/WhySafariBet365"}
+                  <Link
+                     activeClass="active" 
+                     to="whysafari" 
+                     spy={true} 
+                     smooth={true} 
+                     offset={-100} 
+                     duration={500} 
                     style={{
                       textDecoration: "none",
                       color: activeOffest ? "#FFF" : "#FFF",
@@ -100,11 +127,16 @@ const Header = () => {
                     }}
                   >
                     Why SafariBet365
-                  </NavLink>
+                  </Link>
                 </Typography>
                 <Typography sx={{fontSize:"15px"}}>
-                  <NavLink
-                    to={"/contact-us"}
+                  <Link
+                   activeClass="active" 
+                   to="footer" 
+                   spy={true} 
+                   smooth={true} 
+                   offset={-100} 
+                   duration={500} 
                     style={{
                       textDecoration: "none",
                       color: activeOffest ? "#FFF" : "#FFF",
@@ -112,18 +144,23 @@ const Header = () => {
                     }}
                   >
                           Contact Us
-                  </NavLink>
+                  </Link>
                 </Typography>
                 <Typography sx={{fontSize:"15px"}}>
-                  <NavLink
-                    to={"/Blogs"}
+                  <Link
+                    activeClass="active" 
+                    to="footer" 
+                    spy={true} 
+                    smooth={true} 
+                    offset={-100} 
+                    duration={500} 
                     style={{
                       textDecoration: "none",
                       color: activeOffest ? "#FFF" : "#FFF",
                     }}
                   >
                               Blogs
-                  </NavLink>
+                  </Link>
                 </Typography>
                 
                  

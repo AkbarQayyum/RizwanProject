@@ -4,11 +4,12 @@ import FooterStyle from './FooterStyle';
 import WhatsAppStyle from '../../pages/What\'sApp/WhatsAppStyle';
 import { FaFacebookF, FaInstagram, FaWhatsapp } from "react-icons/fa";
 
+import { Link } from 'react-scroll';
 
 const Footer = () => {
     return (
         <>
-            <Box sx={{ background: "#040C41", padding: "3rem 0" }}>
+            <Box sx={{ background: "#040C41", padding: "3rem 0" }} id={'footer'}>
                 <Container>
                     <Box component={'img'} src={Logo} sx={{ width: "30%" }} />
 
@@ -38,17 +39,47 @@ const Footer = () => {
                         <a href="https://wa.me/916232582686/?text=I need help" className="whatsbtn" target="_blank" style={WhatsAppStyle.atag}>Get Started Playing</a>
                     </Box>
 
-                    <Box mt={7} sx={{textAlign:{md:"left", xs:"center"}}}>
+                    <Box mt={7} sx={{ textAlign: { md: "left", xs: "center" } }}>
                         <a href="#" className='footerlink' target="_blank" rel="noopener noreferrer">Home</a>
-                        <a href="#" className='footerlink' target="_blank" rel="noopener noreferrer">About Us</a>
-                        <a href="#" className='footerlink' target="_blank" rel="noopener noreferrer">Our Partners</a>
-                        <a href="#" className='footerlink' target="_blank" rel="noopener noreferrer">How It Works</a>
-                        <a href="#" className='footerlink' target="_blank" rel="noopener noreferrer">Celebs Love Us</a>
-                        <a href="#" className='footerlink' target="_blank" rel="noopener noreferrer">Why LaserBook</a>
-                        <a href="#" className='footerlink' target="_blank" rel="noopener noreferrer">Contact Us</a>
-                        <a href="#" className='footerlink' target="_blank" rel="noopener noreferrer">Blogs</a>
-                        <a href="#" className='footerlink' target="_blank" rel="noopener noreferrer">Privacy Policy</a>
-                        <a href="#" className='footerlink' target="_blank" rel="noopener noreferrer">Terms & Conditions</a>
+                        <Link activeClass="active"
+                            to="aboutus"
+                            spy={true}
+                            smooth={true}
+                            offset={-100}
+                            duration={500} className='footerlink' target="_blank" rel="noopener noreferrer">About Us</Link>
+                        <Link activeClass="active"
+                            to="partners"
+                            spy={true}
+                            smooth={true}
+                            offset={-100}
+                            duration={500} className='footerlink' target="_blank" rel="noopener noreferrer">Our Partners</Link>
+                        <Link activeClass="active"
+                            to="working"
+                            spy={true}
+                            smooth={true}
+                            offset={-100}
+                            duration={500} className='footerlink' target="_blank" rel="noopener noreferrer">How It Works</Link>
+                        <Link activeClass="active"
+                            to="celebs"
+                            spy={true}
+                            smooth={true}
+                            offset={-100}
+                            duration={500} className='footerlink' target="_blank" rel="noopener noreferrer">Celebs Love Us</Link>
+                        <Link activeClass="active"
+                            to="whysafari"
+                            spy={true}
+                            smooth={true}
+                            offset={-100}
+                            duration={500} className='footerlink' target="_blank" rel="noopener noreferrer">Why LaserBook</Link>
+                        <Link activeClass="active"
+                            to="footer"
+                            spy={true}
+                            smooth={true}
+                            offset={-100}
+                            duration={500} className='footerlink' target="_blank" rel="noopener noreferrer">Contact Us</Link>
+                        <a href="#" className='footerlink' rel="noopener noreferrer">Blogs</a>
+                        <a href="#" className='footerlink' rel="noopener noreferrer">Privacy Policy</a>
+                        <a href="#" className='footerlink' rel="noopener noreferrer">Terms & Conditions</a>
                     </Box>
 
                     <Box sx={{ marginTop: "1rem", display: "flex", gap: 4 }}>
